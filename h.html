@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crunchy Bite</title>
+
+     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="h.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+            <h1>Crunchy Bite</h1>
+        </div>
+
+        <!-- NAV -->
+        <nav class="nav" id="navMenu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+
+                <!-- MOBILE EXTRA ITEMS -->
+                <li class="mobile-only"><a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li class="mobile-only"><a href="#">Login</a></li>
+            </ul>
+        </nav>
+
+        <!-- SEARCH -->
+        <div class="search">
+            <input type="text" placeholder="Search products...">
+            <button>Search</button>
+        </div>
+
+        <!-- ICONS -->
+        <div class="icons">
+            <div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+            </div>
+            <button class="login">Login</button>
+        </div>
+
+        <!-- HAMBURGER -->
+        <div class="mobile" onclick="toggleMenu(this)">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+</header>
+
+<div class="slider">
+    <img class="slide active" src="img/banner1.png">
+    <img class="slide" src="img/banner2.png">
+    <img class="slide" src="img/banner3.png">
+</div>
+
+
+<!-- <div class="slider">
+    <img class="slide active" src="img/almond.jpg">
+    <img class="slide" src="img/almondss.jpg">
+    <img class="slide" src="img/logo.png"> -->
+</div>
+<div class="bcard">
+        
+        <!-- Product 1: Almonds -->
+        <div class="card">
+            <div class="product-image almonds"></div>
+            <div class="product-info">
+                <h3>Premium California Almonds</h3>
+                <p class="desc">100% natural raw almonds, crunchy and fresh.</p>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <div class="price"><span class="sale-price">Rs. 1,899</span> <span class="old-price">Rs. 2,499</span></div>
+            </div>
+        </div>
+
+        <!-- Product 2: Mix Nuts -->
+        <div class="card">
+            <div class="product-image mix-nuts"></div>
+            <div class="product-info">
+                <h3>Royal Dry Fruit Mix</h3>
+                <p class="desc">Perfect rich blend of cashews, almonds, and walnuts.</p>
+                <div class="rating">⭐⭐⭐⭐★</div>
+                <div class="price"><span class="sale-price">Rs. 1,499</span> <span class="old-price">Rs. 1,999</span></div>
+            </div>
+        </div>
+
+        <!-- Product 3: Dates -->
+        <div class="card">
+            <div class="product-image dates"></div>
+            <div class="product-info">
+                <h3>Premium Saudi Dates</h3>
+                <p class="desc">Naturally sweet, soft, and packed with instant energy.</p>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <div class="price"><span class="sale-price">Rs. 890</span> <span class="old-price">Rs. 1,200</span></div>
+            </div>
+        </div>
+
+        <!-- Product 4: Cashews -->
+        <div class="card">
+            <div class="product-image cashews"></div>
+            <div class="product-info">
+                <h3>King Size Cashews</h3>
+                <p class="desc">Jumbo size, crispy, creamy texture and lightly toasted.</p>
+                <div class="rating">⭐⭐⭐⭐★</div>
+                <div class="price"><span class="sale-price">Rs. 1,750</span> <span class="old-price">Rs. 2,200</span></div>
+            </div>
+        </div>
+        
+        <!-- Product 5: Pistachios -->
+        <div class="card">
+            <div class="product-image pistachios"></div>
+            <div class="product-info">
+                <h3>Salted Iranian Pistachios</h3>
+                <p class="desc">Perfectly roasted and lightly salted premium pistas.</p>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <div class="price"><span class="sale-price">Rs. 1,950</span> <span class="old-price">Rs. 2,500</span></div>
+            </div>
+        </div>
+
+    </div>
+
+<script>
+// function toggleMenu(x) {
+//     document.getElementById("navMenu").classList.toggle("active");
+//     x.classList.toggle("open");
+// }
+</script>
+<script src="h.js"></script>
+
+</body>
+</html>

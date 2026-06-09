@@ -1,0 +1,425 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+}
+
+
+/* CONTAINER */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo h1 {
+    font-size: 20px;
+}
+
+/* NAV */
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* NAV HOVER */
+.nav a:hover {
+    color: #ff6b35;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #ff6b35;
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* SEARCH */
+.search {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 30px;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px 12px;
+    width: 160px;
+}
+
+.search button {
+    border: none;
+    background: #ff6b35;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* ICONS */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* CART */
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cart:hover {
+    color: #ff6b35;
+    transform: scale(1.05);
+}
+
+/* LOGIN */
+.login {
+    background: black;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.login:hover {
+    background: #ff6b35;
+    transform: scale(1.05);
+}
+
+/* HAMBURGER */
+.mobile {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.mobile span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    transition: 0.3s;
+}
+
+/* HAMBURGER ANIMATION */
+.mobile.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* MOBILE MENU */
+.mobile-only {
+    display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+    .nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .mobile-only a {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        color: black;
+    }
+}
+
+/* Base Style for Grid layout */
+.bcard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card Styling */
+.card {
+    border: 3px solid aliceblue;
+    width: 100%;
+    max-width: 290px;
+    min-height: 380px; /* Thoda height barhaya taake detail fit ho sake */
+    border-radius: 15px;
+    /* background-color: rgb(240, 248, 255); */
+    /* box-shadow:0px 0px 10px 8px #3333; */
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.548);
+    overflow: hidden; /* Round corners smooth rakhne ke liye */
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover{
+    max-width: 300px;
+    min-height: 390px;
+}
+/* Image Area Styling */
+.product-image {
+    width: 100%;
+    height: 170px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.4s ease;
+}
+
+/* --- Product Wise Images & Hover Effects --- */
+.almonds { background-image: url('img/almond.jpg'); }
+.almonds:hover { background-image: url('img/almondss.jpg'); }
+
+.mix-nuts { background-image: url('img/mix_nuts.jpg'); }
+.mix-nuts:hover { background-image: url('img/mix_nuts_hover.jpg'); }
+
+.dates { background-image: url('img/dates.jpg'); }
+.dates:hover { background-image: url('img/dates_hover.jpg'); }
+
+.cashews { background-image: url('img/cashews.jpg'); }
+.cashews:hover { background-image: url('img/cashews_hover.jpg'); }
+
+.pistachios { background-image: url('img/pista.jpg'); }
+.pistachios:hover { background-image: url('img/pista_hover.jpg'); }
+
+
+/* Info Area Styling */
+.product-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.product-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.product-info .desc {
+    margin: 0 0 10px 0;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.product-info .rating {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Price Formatting */
+.price {
+    margin-top: auto;
+    font-size: 16px;
+}
+
+.sale-price {
+    font-weight: bold;
+    color: #d9534f; /* Red/Orange Alert text for sales */
+    margin-right: 8px;
+}
+
+.old-price {
+    font-size: 13px;
+    color: #999;
+    text-decoration: line-through; /* Price cut effect */
+}
+
+/* --- Responsive Media Queries --- */
+
+/* Tablet View (3 or 2 columns based on screen) */
+@media (max-width: 1200px) {
+    .bcard {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .bcard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+    .bcard {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        max-width: 100%;
+    }
+}
+
+
+/* FULL SCREEN BANNER */
+/* .slider {
+    width: 100vw;           
+    height: 100vh;          
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;      
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+} */
+
+ .slider {
+    width: 100%;
+    height: 400px !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+} 
+
+
+
+/* Responsive Banner for Mobile & Tablets */
+@media (max-width: 900px) {
+    .slider {
+        height: 280px; /* Tablets aur medium screens ke liye banner chota ho jayega */
+    }
+}
+
+@media (max-width: 600px) {
+    .slider {
+        height: 180px; /* Mobile screens par banner bilkul perfect size ka dikhega */
+    }
+}
+
+
+
