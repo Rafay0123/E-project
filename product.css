@@ -1,0 +1,526 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #fff; 
+    color: #333;
+}
+
+/* ====== BASIC HEADER ====== */
+/* General Header Styles */
+.header { width: 100%; position: sticky; top: 0; z-index: 1000; background: white; border-bottom: 1px solid #ddd; }
+.container { display: flex; align-items: center; justify-content: space-between; padding: 15px 20px; }
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo img { width: 40px; height: 40px; object-fit: contain; }
+
+/* Navigation with Hover Line */
+.nav ul { display: flex; list-style: none; gap: 20px; }
+.nav a { 
+    text-decoration: none; color: black; font-weight: 500; 
+    position: relative; transition: 0.3s; 
+}
+.nav a:hover { color: #ff6b35; }
+
+/* Hover Line Animation */
+.nav a::after {
+    content: ""; position: absolute; left: 0; bottom: -5px; 
+    width: 0; height: 2px; background: #ff6b35; transition: 0.3s;
+}
+.nav a:hover::after { width: 100%; }
+
+/* Search & Icons */
+.search { display: flex; align-items: center; background: #f5f5f5; border-radius: 30px; padding: 5px; border: 1px solid #ddd; }
+.search input { border: none; outline: none; background: transparent; padding: 8px 12px; width: 140px; }
+.search button { border: none; background: #ff6b35; color: white; padding: 8px 15px; border-radius: 20px; cursor: pointer; }
+.icons { display: flex; align-items: center; gap: 15px; }
+.cart { cursor: pointer; color: #333; transition: 0.3s; }
+.cart:hover { color: #ff6b35; }
+.login { background: black; color: white; border: none; padding: 6px 12px; cursor: pointer; border-radius: 5px; transition: 0.3s; }
+.login:hover { background: #ff6b35; }
+
+/* Mobile Menu Setup */
+.mobile { display: none; flex-direction: column; gap: 4px; cursor: pointer; }
+.mobile span { width: 25px; height: 3px; background: black; transition: 0.3s; }
+.mobile-only { display: none; }
+
+
+.mobile {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1100; /* Taake hamesha upar dikhe */
+}
+
+.mobile span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: black;
+    transition: all 0.3s ease;
+    transform-origin: left center; /* Ye X banane ke liye zaroori hai */
+}
+/* Responsive Media Query */
+@media (max-width: 900px) {
+    .mobile { display: flex; }
+    .icons { display: none; }
+    
+    .nav {
+        position: absolute; top: 70px; left: 0; width: 100%;
+        background: white; display: none; flex-direction: column;
+        text-align: center; padding: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .nav.active { display: flex; }
+    .nav ul { flex-direction: column; gap: 15px; }
+    .mobile-only { display: block; }
+    
+    /* Hamburger to X Animation */
+    .mobile.open span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+    .mobile.open span:nth-child(2) { opacity: 0; }
+    .mobile.open span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+}
+
+/* ====== MASTER GRID & LAYOUT SYSTEM ====== */
+.bcard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 40px 20px;
+    background: #fff;
+}
+
+.card {
+    border: 3px solid aliceblue;
+    width: 100%;
+    max-width: 290px;
+    min-height: 360px;
+    border-radius: 15px;
+    margin: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    background: #fff;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* SUCCESS CLICK ANIMATION CLASS */
+.card.added-animate {
+    animation: clickBump 0.4s ease-out;
+}
+
+@keyframes clickBump {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.92); border-color: #bc7631; }
+    100% { transform: scale(1); }
+}
+
+/* Base Style for Product Images */
+.product-image {
+    width: 100%;
+    height: 170px;
+    background-color: #f1f5f9; /* Fallback surface */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.4s ease-in-out, transform 0.4s ease; /* Smooth hover transition */
+}
+
+/* ==========================================
+   PRODUCTS IMAGE MATRIX (MAIN & HOVER LINKS)
+   ========================================== */
+
+/* 1. Premium California Almonds */
+.product-image.p1 { 
+    background-image: url('img/1st.jfif'); 
+}
+.card:hover .product-image.p1 { 
+    background-image: url('https://images.unsplash.com/photo-1508061253366-f7da158b6d46?q=80&w=600&auto=format&fit=crop'); 
+}
+
+/* 2. Royal Dry Fruit Mix */
+.product-image.p2 { 
+    background-image: url('img/2.jfif'); 
+}
+.card:hover .product-image.p2 { 
+    background-image: url('img/2.0.png'); 
+}
+
+/* 3. Premium Saudi Dates */
+.product-image.p3 { 
+    background-image: url('img/3.webp'); 
+}
+.card:hover .product-image.p3 { 
+    background-image: url('img/3.0.png'); 
+}
+
+/* 4. King Size Cashews */
+.product-image.p4 { 
+    background-image: url('img/4.jfif'); 
+}
+.card:hover .product-image.p4 { 
+    background-image: url('img/4.0.png'); 
+}
+
+/* 5. Salted Iranian Pistachios */
+.product-image.p5 { 
+    background-image: url('img/5.0.png'); 
+}
+.card:hover .product-image.p5 { 
+    background-image: url('img/5.jfif'); 
+}
+
+/* 6. Premium Chilean Walnuts */
+.product-image.p6 { 
+    background-image: url('img/6.png'); 
+}
+.card:hover .product-image.p6 { 
+    background-image: url('img/6.0.png'); 
+}
+
+/* 7. Holy Ajwa Dates (Medina) */
+.product-image.p7 { 
+    background-image: url('img/7.png'); 
+}
+.card:hover .product-image.p7 { 
+    background-image: url('img/7.0.png'); 
+}
+
+/* 8. Salt & Pepper Almonds */
+.product-image.p8 { 
+    background-image: url('img/8.jfif'); 
+}
+.card:hover .product-image.p8 { 
+    background-image: url('https://images.unsplash.com/photo-1508061253366-f7da158b6d46?q=80&w=500&auto=format&fit=crop'); 
+}
+
+/* 9. Dried Turkish Apricots */
+.product-image.p9 { 
+    background-image: url('img/9.png'); 
+}
+.card:hover .product-image.p9 { 
+    background-image: url('img/9.0.png'); 
+}
+
+/* 10. Premium Afghani Anjeer */
+.product-image.p10 { 
+    background-image: url('img/10.png'); 
+}
+.card:hover .product-image.p10 { 
+    background-image: url('img/10.0.png'); 
+}
+
+/* 11. Premium Long Green Kishmish */
+.product-image.p11 { 
+    background-image: url('img/11.png'); 
+}
+.card:hover .product-image.p11 { 
+    background-image: url('img/11.0.png'); 
+}
+
+/* 12. Luxury Raw Macadamia Nuts */
+.product-image.p12 { 
+    background-image: url('img/12.png'); 
+}
+.card:hover .product-image.p12 { 
+    background-image: url('img/12.0.png'); 
+}
+
+/* 13. Waziristan Roasted Chilgoza */
+.product-image.p13 { 
+    background-image: url('img/13.png'); 
+}
+.card:hover .product-image.p13 { 
+    background-image: url('img/13.0.png'); 
+}
+
+/* 14. Premium American Pecans */
+.product-image.p14 { 
+    background-image: url('img/14.png'); 
+}
+.card:hover .product-image.p14 { 
+    background-image: url('img/14.0.png'); 
+}
+
+/* 15. Organic Amazon Brazil Nuts */
+.product-image.p15 { 
+    background-image: url('img/15.png'); 
+}
+.card:hover .product-image.p15 { 
+    background-image: url('img/15.0.png'); 
+}
+
+/* 16. Sliced Crimson Cranberries */
+.product-image.p16 { 
+    background-image: url('img/16.png'); 
+}
+.card:hover .product-image.p16 { 
+    background-image: url('img/16.0.png'); 
+}
+
+/* 17. Whole Wild Dried Blueberries */
+.product-image.p17 { 
+    background-image: url('img/17.png'); 
+}
+.card:hover .product-image.p17 { 
+    background-image: url('https://images.unsplash.com/photo-1498557850523-fd3d118b962e?q=80&w=500&auto=format&fit=crop'); 
+}
+
+/* 18. Jumbo King Medjool Dates */
+.product-image.p18 { 
+    background-image: url('img/18.png'); 
+}
+.card:hover .product-image.p18 { 
+    background-image: url('img/18.0.png'); 
+}
+
+/* 19. Raw Organic Pumpkin Seeds */
+.product-image.p19 { 
+    background-image: url('img/19.png'); 
+}
+.card:hover .product-image.p19 { 
+    background-image: url('img/19.0.png'); 
+}
+
+/* 20. Spicy Peri Peri Cashews */
+.product-image.p20 { 
+    background-image: url('img/20.png'); 
+}
+.card:hover .product-image.p20 { 
+    background-image: url('img/20.0.png'); 
+}
+
+/* 21. Premium Whole Hazelnuts */
+.product-image.p21 { 
+    background-image: url('img/21.png'); 
+}
+.card:hover .product-image.p21 { 
+    background-image: url('img/21.0.png'); 
+}
+
+/* 22. Seedless Jumbo Black Raisins */
+.product-image.p22 { 
+    background-image: url('img/22.png'); 
+}
+.card:hover .product-image.p22 { 
+    background-image: url('img/22.0.png');
+}
+
+.product-image.p23 { 
+    background-image: url('img/23.png'); 
+}
+.card:hover .product-image.p23 { 
+    background-image: url('img/23.0.png');
+}
+
+.product-image.p24 { 
+    background-image: url('img/24.png'); 
+}
+.card:hover .product-image.p24 { 
+    background-image: url('img/24.0.png');
+}
+
+.product-image.p25 { 
+    background-image: url('img/25.png'); 
+}
+.card:hover .product-image.p25 { 
+    background-image: url('img/25.0.png');
+}
+
+.product-image.p26 { 
+    background-image: url('img/26.png'); 
+}
+.card:hover .product-image.p26 { 
+    background-image: url('img/26.0.png');
+}
+
+.product-image.p27 { 
+    background-image: url('img/27.png'); 
+}
+.card:hover .product-image.p27 { 
+    background-image: url('img/27.0.png');
+}
+
+.product-image.p28 { 
+    background-image: url('img/28.png'); 
+}
+.card:hover .product-image.p28 { 
+    background-image: url('img/28.0.png');
+}
+
+.product-image.p29 { 
+    background-image: url('img/29.png'); 
+}
+.card:hover .product-image.p29 { 
+    background-image: url('img/29.0.png');
+}
+
+.product-image.p30 { 
+    background-image: url('img/30.png'); 
+}
+.card:hover .product-image.p30 { 
+    background-image: url('img/30.0.png');
+}
+
+.product-image.p31 { 
+    background-image: url('img/31.png'); 
+}
+.card:hover .product-image.p31 { 
+    background-image: url('img/31.0.png');
+}
+
+.product-image.p32 { 
+    background-image: url('img/32.png'); 
+}
+.card:hover .product-image.p32 { 
+    background-image: url('img/32.0.png');
+}
+
+.product-image.p33 { 
+    background-image: url('img/33.png'); 
+}
+.card:hover .product-image.p33 { 
+    background-image: url('img/33.0.png');
+}
+
+.product-image.p34 { 
+    background-image: url('img/34.png'); 
+}
+.card:hover .product-image.p34 { 
+    background-image: url('img/34.0.png');
+}
+
+
+
+.product-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.product-info h3 { margin: 0 0 5px 0; font-size: 16px; color: #333; }
+.product-info .desc { margin: 0 0 10px 0; font-size: 13px; color: #666; }
+.price { margin-top: auto; font-size: 16px; font-weight: bold; color: #bc7631; }
+
+/* Responsive Adjustments */
+@media(max-width: 1200px){ .bcard{grid-template-columns: repeat(3, 1fr);} }
+@media(max-width: 900px){ .bcard{grid-template-columns: repeat(2, 1fr);} }
+@media(max-width: 600px){ .bcard{grid-template-columns: 1fr;} }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+  background:#111;
+  color:#ddd;
+  padding:60px 8% 20px;
+  font-family: Arial, sans-serif;
+}
+
+.container{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:40px;
+}
+
+.col{
+  flex:1;
+  min-width:200px;
+}
+
+.col h2{
+  color:#fff;
+  margin-bottom:10px;
+  font-size:22px;
+}
+
+.col h3{
+  color:#fff;
+  margin-bottom:12px;
+  font-size:16px;
+}
+
+.col p{
+  line-height:1.6;
+  color:#aaa;
+}
+
+.col a{
+  display:block;
+  color:#aaa;
+  text-decoration:none;
+  margin:6px 0;
+  transition:0.3s;
+}
+
+.col a:hover{
+  color:#d4a017;
+  transform:translateX(5px);
+}
+
+.bottom{
+  text-align:center;
+  margin-top:40px;
+  padding-top:15px;
+  border-top:1px solid #222;
+  color:#777;
+  font-size:14px;
+}
+

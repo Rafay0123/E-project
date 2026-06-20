@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product.css">
+    <title>Crunchy Bite - Premium Dry Fruits</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+ <header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+            <h1>Crunchy Bites</h1>
+        </div>
+        <nav class="nav" id="navMenu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-only"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li class="mobile-only"><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search products...">
+            <button>Search</button>
+        </div>
+        <div class="icons">
+            <div class="cart" onclick="window.location.href='cart.html'">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+            </div>
+            <button class="login" onclick="window.location.href='login.html'">Login</button>
+        </div>
+        <div class="mobile" onclick="toggleMenu(this)">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</header>
+
+
+<div id="cart-warning-box" style="text-align: center; font-weight: bold; color: #d9534f; font-size: 16px; margin: 10px 0; height: 24px; font-family: sans-serif;"></div>
+
+
+
+<div class="bcard">
+
+    <div class="card" onclick="addToCart('Premium California Almonds')">
+
+        <div class="product-image p1"></div>
+
+        <div class="product-info">
+
+            <h3>Premium California Almonds</h3>
+
+            <p class="desc">100% natural raw almonds, crunchy and fresh.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 1,899</span></div>
+
+        </div>
+
+    </div>
+
+   
+
+    <div class="card" onclick="addToCart('Royal Dry Fruit Mix')">
+
+        <div class="product-image p2"></div>
+
+        <div class="product-info">
+
+            <h3>Royal Dry Fruit Mix</h3>
+
+            <p class="desc">Perfect rich blend of cashews, almonds, and walnuts.</p>
+
+            <div class="rating">⭐⭐⭐⭐★</div>
+
+            <div class="price"><span class="sale-price">Rs. 1,499</span></div>
+
+        </div>
+
+    </div>
+
+   
+
+    <div class="card" onclick="addToCart('Premium Saudi Dates')">
+
+        <div class="product-image p3"></div>
+
+        <div class="product-info">
+
+            <h3>Premium Saudi Dates</h3>
+
+            <p class="desc">Naturally sweet, soft, and packed with instant energy.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 890</span></div>
+
+        </div>
+
+    </div>
+
+   
+
+    <div class="card" onclick="addToCart('King Size Cashews')">
+
+        <div class="product-image p4"></div>
+
+        <div class="product-info">
+
+            <h3>King Size Cashews</h3>
+
+            <p class="desc">Jumbo size, crispy, creamy texture and lightly toasted.</p>
+
+            <div class="rating">⭐⭐⭐⭐★</div>
+
+            <div class="price"><span class="sale-price">Rs. 1,750</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Salted Iranian Pistachios')">
+
+        <div class="product-image p5"></div>
+
+        <div class="product-info">
+
+            <h3>Salted Iranian Pistachios</h3>
+
+            <p class="desc">Perfectly roasted and lightly salted premium pistas.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 1,950</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Premium Chilean Walnuts')">
+
+        <div class="product-image p6"></div>
+
+        <div class="product-info">
+
+            <h3>Premium Chilean Walnuts</h3>
+
+            <p class="desc">Extra light half-kernels, rich in brain-boosting Omega-3.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 1,650</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Holy Ajwa Dates (Medina)')">
+
+        <div class="product-image p7"></div>
+
+        <div class="product-info">
+
+            <h3>Holy Ajwa Dates (Medina)</h3>
+
+            <p class="desc">Authentic dark-toned premium dates with fine medical benefits.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 2,400</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Salt & Pepper Almonds')">
+
+        <div class="product-image p8"></div>
+
+        <div class="product-info">
+
+            <h3>Salt & Pepper Almonds</h3>
+
+            <p class="desc">Slow-roasted premium crunchy almonds with organic sea salt.</p>
+
+            <div class="rating">⭐⭐⭐⭐★</div>
+
+            <div class="price"><span class="sale-price">Rs. 1,999</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Dried Turkish Apricots')">
+
+        <div class="product-image p9"></div>
+
+        <div class="product-info">
+
+            <h3>Dried Turkish Apricots</h3>
+
+            <p class="desc">Plump, naturally sweet, sunny golden seedless apricots.</p>
+
+            <div class="rating">⭐⭐⭐⭐★</div>
+
+            <div class="price"><span class="sale-price">Rs. 1,150</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Premium Afghani Anjeer')">
+
+        <div class="product-image p10"></div>
+
+        <div class="product-info">
+
+            <h3>Premium Afghani Anjeer</h3>
+
+            <p class="desc">Soft, string-packed sweet figs with high dietary fiber.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 2,100</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Premium Long Green Kishmish')">
+
+        <div class="product-image p11"></div>
+
+        <div class="product-info">
+
+            <h3>Premium Long Green Kishmish</h3>
+
+            <p class="desc">Naturally dried sweet raisins from the valleys of Kandahar.</p>
+
+            <div class="rating">⭐⭐⭐⭐★</div>
+
+            <div class="price"><span class="sale-price">Rs. 690</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Luxury Raw Macadamia Nuts')">
+
+        <div class="product-image p12"></div>
+
+        <div class="product-info">
+
+            <h3>Luxury Raw Macadamia Nuts</h3>
+
+            <p class="desc">Exquisite buttery, rich-textured cream nuts imported directly.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 3,800</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Waziristan Roasted Chilgoza')">
+
+        <div class="product-image p13"></div>
+
+        <div class="product-info">
+
+            <h3>Waziristan Roasted Chilgoza</h3>
+
+            <p class="desc">Premium pine nuts in shell, intensely rich and aromatic.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 4,900</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Premium American Pecans')">
+
+        <div class="product-image p14"></div>
+
+        <div class="product-info">
+
+            <h3>Premium American Pecans</h3>
+
+            <p class="desc">Crisp, golden-brown sweet nuts with deep shell grooves.</p>
+
+            <div class="rating">⭐⭐⭐⭐★</div>
+
+            <div class="price"><span class="sale-price">Rs. 2,650</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Organic Amazon Brazil Nuts')">
+
+        <div class="product-image p15"></div>
+
+        <div class="product-info">
+
+            <h3>Organic Amazon Brazil Nuts</h3>
+
+            <p class="desc">Huge size, raw textured kernels packed with vital Selenium.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 2,900</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Sliced Crimson Cranberries')">
+
+        <div class="product-image p16"></div>
+
+        <div class="product-info">
+
+            <h3>Sliced Crimson Cranberries</h3>
+
+            <p class="desc">Perfect sweet and tangy dried berries for premium snacking.</p>
+
+            <div class="rating">⭐⭐⭐⭐★</div>
+
+            <div class="price"><span class="sale-price">Rs. 1,250</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Whole Wild Dried Blueberries')">
+
+        <div class="product-image p17"></div>
+
+        <div class="product-info">
+
+            <h3>Whole Wild Dried Blueberries</h3>
+
+            <p class="desc">Antioxidant-rich soft dried whole berries without added sugars.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 1,950</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Jumbo King Medjool Dates')">
+
+        <div class="product-image p18"></div>
+
+        <div class="product-info">
+
+            <h3>Jumbo King Medjool Dates</h3>
+
+            <p class="desc">Large, soft, maple-syrup tasting premium luxury dates.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 2,800</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Raw Organic Pumpkin Seeds')">
+
+        <div class="product-image p19"></div>
+
+        <div class="product-info">
+
+            <h3>Raw Organic Pumpkin Seeds</h3>
+
+            <p class="desc">Dark green premium grade hull-less high protein seeds.</p>
+
+            <div class="rating">⭐⭐⭐⭐★</div>
+
+            <div class="price"><span class="sale-price">Rs. 850</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Spicy Peri Peri Cashews')">
+
+        <div class="product-image p20"></div>
+
+        <div class="product-info">
+
+            <h3>Spicy Peri Peri Cashews</h3>
+
+            <p class="desc">Kaju micro-roasted with dry gourmet African chili spices.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 1,850</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Premium Whole Hazelnuts')">
+
+        <div class="product-image p21"></div>
+
+        <div class="product-info">
+
+            <h3>Premium Whole Hazelnuts</h3>
+
+            <p class="desc">Raw, unpeeled premium round kernels from Turkish orchards.</p>
+
+            <div class="rating">⭐⭐⭐⭐★</div>
+
+            <div class="price"><span class="sale-price">Rs. 2,150</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Seedless Jumbo Black Raisins')">
+
+        <div class="product-image p22"></div>
+
+        <div class="product-info">
+
+            <h3>Seedless Jumbo Black Raisins</h3>
+
+            <p class="desc">Naturally sweet, dark sun-dried grapes rich in iron.</p>
+
+            <div class="rating">⭐⭐⭐⭐★</div>
+
+            <div class="price"><span class="sale-price">Rs. 890</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Dehydrated Premium Kiwi Slices')">
+
+        <div class="product-image p23"></div>
+
+        <div class="product-info">
+
+            <h3>Dehydrated Premium Kiwi Slices</h3>
+
+            <p class="desc">Vibrant green sweet-sour natural candied tropical fruit slices.</p>
+
+            <div class="rating">⭐⭐⭐⭐★</div>
+
+            <div class="price"><span class="sale-price">Rs. 1,350</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Saffron In-Shell Pistachios')">
+
+        <div class="product-image p24"></div>
+
+        <div class="product-info">
+
+            <h3>Saffron In-Shell Pistachios</h3>
+
+            <p class="desc">Premium open-mouth pistas roasted with authentic saffron paths.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 2,250</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Luxury Piarom Maryami Dates')">
+
+        <div class="product-image p25"></div>
+
+        <div class="product-info">
+
+            <h3>Luxury Piarom Maryami Dates</h3>
+
+            <p class="desc">Semi-dry, slim, dark-skinned elite dates with rich texture.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 2,990</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Organic Sunflower Seeds')">
+
+        <div class="product-image p26"></div>
+
+        <div class="product-info">
+
+            <h3>Organic Sunflower Seeds</h3>
+
+            <p class="desc">Premium raw deshelled kernels, perfect for dynamic health.</p>
+
+            <div class="rating">⭐⭐⭐⭐★</div>
+
+            <div class="price"><span class="sale-price">Rs. 750</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Premium Organic Chia Seeds')">
+
+        <div class="product-image p27"></div>
+
+        <div class="product-info">
+
+            <h3>Premium Organic Chia Seeds</h3>
+
+            <p class="desc">100% natural, fiber-rich tiny seeds for healthy energy boosts.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 990</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Sweet Dehydrated Mango Slices')">
+
+        <div class="product-image p28"></div>
+
+        <div class="product-info">
+
+            <h3>Sweet Dehydrated Mango Slices</h3>
+
+            <p class="desc">Exotic chewy, naturally sweet tropical mango strips.</p>
+
+            <div class="rating">⭐⭐⭐⭐★</div>
+
+            <div class="price"><span class="sale-price">Rs. 1,450</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Raw Golden Flax Seeds')">
+
+        <div class="product-image p29"></div>
+
+        <div class="product-info">
+
+            <h3>Raw Golden Flax Seeds</h3>
+
+            <p class="desc">Alsi seeds packed with high alpha-linolenic omega acids.</p>
+
+            <div class="rating">⭐⭐⭐⭐★</div>
+
+            <div class="price"><span class="sale-price">Rs. 600</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Premium Dried Sweet Prunes')">
+
+        <div class="product-image p30"></div>
+
+        <div class="product-info">
+
+            <h3>Premium Dried Sweet Prunes</h3>
+
+            <p class="desc">Pitted, juicy black plums helping digestion naturally.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 1,380</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Organic Tibetan Goji Berries')">
+
+        <div class="product-image p31"></div>
+
+        <div class="product-info">
+
+            <h3>Organic Tibetan Goji Berries</h3>
+
+            <p class="desc">Deep crimson dried Himalayan superfood berry clusters.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 2,450</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Gourmet Roasted Yellow Chana')">
+
+        <div class="product-image p32"></div>
+
+        <div class="product-info">
+
+            <h3>Gourmet Roasted Yellow Chana</h3>
+
+            <p class="desc">Super crispy, non-oily high protein roasted chickpeas.</p>
+
+            <div class="rating">⭐⭐⭐⭐★</div>
+
+            <div class="price"><span class="sale-price">Rs. 450</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Premium Mabroom Dates')">
+
+        <div class="product-image p33"></div>
+
+        <div class="product-info">
+
+            <h3>Premium Mabroom Dates</h3>
+
+            <p class="desc">Slender, chewy, firm textured premium royal Saudi dates.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 1,950</span></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card" onclick="addToCart('Royal Sukari Soft Dates')">
+
+        <div class="product-image p34"></div>
+
+        <div class="product-info">
+
+            <h3>Royal Sukari Soft Dates</h3>
+
+            <p class="desc">Cone-shaped golden melt-in-mouth ultra sweet fresh dates.</p>
+
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+
+            <div class="price"><span class="sale-price">Rs. 1,200</span></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+   
+
+
+   <footer class="footer">
+        <div class="container">
+
+            <div class="col">
+                <h2>Crunchy Bite</h2>
+                <p>Premium quality dry fruits delivered fresh and healthy to your doorstep.</p>
+            </div>
+
+            <div class="col">
+                <h3>Links</h3>
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="col">
+                <h3>Categories</h3>
+                <a href="#">Almonds</a>
+                <a href="#">Cashews</a>
+                <a href="#">Walnuts</a>
+                <a href="#">Dates</a>
+            </div>
+
+            <div class="col">
+                <h3>Contact</h3>
+                <p>📧 info@crunchybite.com</p>
+                <p>📞 +92 300 1234567</p>
+                <p>📍 Karachi, Pakistan</p>
+            </div>
+
+        </div>
+
+        <div class="bottom">
+            <p>© 2026 Crunchy Bite. All rights reserved.</p>
+        </div>
+    </footer>
+<script src="product.js"></script>
+</body>
+</html>

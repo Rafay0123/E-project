@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crunchy Bite - Premium Dry Fruits</title>
+
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="top-marquee">
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+        ✨ <b>Ramzan & Eid Special Sale:</b> Get 20% OFF on Premium Dates & Gift Hampers! | 📦 <b>Free Delivery</b> on orders above Rs. 500000/- | 🍏 100% Pure, Organic & Fresh Dry Fruits delivered straight to your home!
+    </marquee>
+</div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo">
+                <h1>Crunchy Bite</h1>
+            </div>
+            <nav class="nav active" id="navMenu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="mobile-only"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                    <li class="mobile-only"><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" placeholder="Search products...">
+                <button>Search</button>
+            </div>
+            <div class="icons">
+                <div class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                </div>
+                <button class="login">Login</button>
+            </div>
+            <div class="mobile" onclick="toggleMenu(this)">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        
+        <div class="swiper-slide banner-slide slide-one">
+            <div class="slide-content alignment-left">
+                <span class="sub-title">100% Natural & Premium Quality</span>
+                <h2>Premium <br><span class="gold-text">DRY FRUITS</span></h2>
+                <p>Nature's Goodness in Every Bite</p>
+                <a href="product.html" class="banner-btn">SHOP NOW</a>
+            </div>
+        </div>
+        
+        <div class="swiper-slide banner-slide slide-two light-bg-slide">
+            <div class="slide-content alignment-left">
+                <span class="sub-title" style="color: #bc7631;">Fuel Your Day With</span>
+                <h2>NATURAL <br><span class="dark-accent">GOODNESS</span></h2>
+                <p>Handpicked | Hygienically Packed | Fresh & Pure</p>
+                <a href="product.html" class="banner-btn">EXPLORE NOW</a>
+            </div>
+        </div>
+        
+        <div class="swiper-slide banner-slide slide-three">
+            <div class="slide-content alignment-left">
+                <span class="sub-title">A Perfect Blend of Taste & Health</span>
+                <h2>Pure. Healthy. <br><span class="gold-text">Wholesome</span></h2>
+                <p>Freshly sourced premium nuts for your family.</p>
+                <a href="product.html" class="banner-btn">SHOP COLLECTION</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+    <div class="vid">
+        <div class="bro">
+            <span class="vid-tag">Our Journey</span>
+            <h2>From Nature's Finest Orchards to Your Home</h2>
+            <p>Discover our journey of sourcing and delivering the finest, handpicked dry fruits straight to your
+                doorstep. We ensure maximum care, top-notch hygiene, and unparalleled freshness in every single bite.
+            </p>
+            <a href="#shop" class="vid-btn">Explore Our Collection</a>
+        </div>
+
+        <div class="bro1">
+            <iframe src="https://www.youtube.com/embed/-SUuFmBy4KQ" title="Crunchy Bite Quality Journey"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+                iframe>
+        </div>
+    </div>
+
+    <div class="video-section">
+        <div class="video-container">
+            <h2>Our Premium Quality Journey</h2>
+            <p>Dekhiye hum kaise behtareen aur fresh dry fruits aap tak pohanchate hain.</p>
+
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/-SUuFmBy4KQ"
+                    title="Discover our journey of sourcing and delivering the finest, handpicked dry fruits straight to your doorstep"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="bigimg">
+        <div class="info-section">
+
+            <div class="info-text">
+                <h1>RS Dates & Dry Fruits – Premium Quality Since Day One</h1>
+
+                <p>
+                    Welcome to RS Dates & Dry Fruits, your trusted source for the finest dates and dry fruits.
+                    We offer a rich variety of premium dates including Ajwa, Sukry, Mabroom, Ambar, Qalmi,
+                    Zahedi, Mazafati, Rabbi, Sharifa, and Piarom, alongside handpicked dry fruits like
+                    American almonds, walnuts, cashews, pistachios, figs, raisins, pumpkin seeds,
+                    and sunflower seeds. Every product is carefully selected for freshness, natural taste,
+                    and authentic quality – perfect for daily snacking, gifting, or traditional recipes.
+                    Experience nature’s best with RS Dates & Dry Fruits.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <h1 class="mar">Categories</h1>
+<div class="bcat">
+    <div class="cat">
+        <a href="product.html?cat=dates"><div class="shutter"><span>Premium Dates</span></div></a>
+    </div>
+    <div class="cat1">
+        <a href="product.html?cat=nuts"><div class="shutter"><span>Premium Nuts</span></div></a>
+    </div>
+    <div class="cat2">
+        <a href="product.html?cat=dehydrated"><div class="shutter"><span>Dehydrated Fruits</span></div></a>
+    </div>
+    <div class="cat3">
+        <a href="product.html?cat=seeds"><div class="shutter"><span>Nutritious Seeds</span></div></a>
+    </div>
+</div>
+
+<div class="bcat1">
+    <div class="cat4">
+        <a href="product.html?cat=mixes"><div class="shutter"><span>Premium Mixes</span></div></a>
+    </div>
+    <div class="cat5">
+        <a href="product.html?cat=choice"><div class="shutter"><span>Premium Choice</span></div></a>
+    </div>
+    <div class="cat6">
+        <a href="product.html?cat=gifting"><div class="shutter"><span>Festive Gifting</span></div></a>
+    </div>
+    <div class="cat7">
+        <a href="product.html?cat=roasted"><div class="shutter"><span>Roasted & Salted</span></div></a>
+    </div>
+</div>
+
+<h1 class="mar1">Our Signature Collections</h1>
+
+ <div class="promo-countdown-section">
+    <div class="promo-content">
+        <span class="promo-tag">LIMITED TIME OFFER</span>
+        <h2>Ramzan Special Mega Deal 🌟</h2>
+        <p>Get flat <b>20% OFF</b> on all premium gift boxes and dates packs. Valid till Eid night only!</p>
+        <div class="countdown-display">
+            <div class="time-box"><span>02</span><p>Days</p></div>
+            <div class="time-box"><span>14</span><p>Hrs</p></div>
+            <div class="time-box"><span>45</span><p>Min</p></div>
+        </div>
+        <a href="product.html" class="vid-btn" style="background: #ff6b35; margin-top: 20px; display: inline-block;"><b>Claim Discount Now</b></a>
+    </div>
+</div>
+
+<div class="why-choose-section">
+    <h1 class="mar1" style="margin-bottom: 50px; margin-top: 50px;">Why Crunchy Bite?</h1>
+    <div class="choose-grid">
+        <div class="choose-card">
+            <div class="choose-icon"><i class="fa-solid fa-gem"></i></div>
+            <h4>Premium Selection</h4>
+            <p>Only top 5% grade size nuts and dates pass our strict optical sorting parameters.</p>
+        </div>
+        <div class="choose-card">
+            <div class="choose-icon"><i class="fa-solid fa-box-tissue"></i></div>
+            <h4>Eco-Friendly Jars</h4>
+            <p>Packed in high-contrast premium glass jars and reusable moisture-locked luxury pouches.</p>
+        </div>
+        <div class="choose-card">
+            <div class="choose-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+            <h4>Lab Certified Pure</h4>
+            <p>100% free from sulfur, artificial colors, crispness enhancers, or added sugar chemicals.</p>
+        </div>
+    </div>
+</div>
+
+<h1 class="mar1">Top Selling Products</h1>
+
+<div class="bcard">
+    <div class="card">
+        <div class="product-image almonds"></div>
+        <div class="product-info">
+            <h3>Premium California Almonds</h3>
+            <p class="desc">100% natural raw almonds, crunchy and fresh.</p>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <div class="price"><span class="sale-price">Rs. 1,899</span> <span class="old-price">Rs. 2,499</span></div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="product-image mix-nuts"></div>
+        <div class="product-info">
+            <h3>Royal Dry Fruit Mix</h3>
+            <p class="desc">Perfect rich blend of cashews, almonds, and walnuts.</p>
+            <div class="rating">⭐⭐⭐⭐★</div>
+            <div class="price"><span class="sale-price">Rs. 1,499</span> <span class="old-price">Rs. 1,999</span></div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="product-image dates"></div>
+        <div class="product-info">
+            <h3>Premium Saudi Dates</h3>
+            <p class="desc">Naturally sweet, soft, and packed with instant energy.</p>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <div class="price"><span class="sale-price">Rs. 890</span> <span class="old-price">Rs. 1,200</span></div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="product-image cashews"></div>
+        <div class="product-info">
+            <h3>King Size Cashews</h3>
+            <p class="desc">Jumbo size, crispy, creamy texture and lightly toasted.</p>
+            <div class="rating">⭐⭐⭐⭐★</div>
+            <div class="price"><span class="sale-price">Rs. 1,750</span> <span class="old-price">Rs. 2,200</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="insta-grid-section">
+    <h1 class="mar1" style="margin-bottom: 20px; margin-top: 50px;">Connect With Our Community</h1>
+    <p style="text-align: center; color: #666; margin-bottom: 40px; font-size: 15px;">Follow our premium lifestyle & cinematic journey across all social platforms.</p>
+    <div class="insta-gallery">
+        <div class="insta-item" style="background-image: url('img/almond.jpg');">
+            <div class="insta-overlay insta-brand"><i class="fa-brands fa-instagram"></i></div>
+        </div>
+        <div class="insta-item" style="background-image: url('img/mix_nuts.jpg');">
+            <div class="insta-overlay fb-brand"><i class="fa-brands fa-facebook-f"></i></div>
+        </div>
+        <div class="insta-item" style="background-image: url('img/dates.jpg');">
+            <div class="insta-overlay yt-brand"><i class="fa-brands fa-youtube"></i></div>
+        </div>
+        <div class="insta-item" style="background-image: url('img/cashews.jpg');">
+            <div class="insta-overlay tt-brand"><i class="fa-brands fa-tiktok"></i></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="col">
+                <h2>Crunchy Bite</h2>
+                <p>Premium quality dry fruits delivered fresh and healthy to your doorstep.</p>
+            </div>
+
+            <div class="col">
+                <h3>Links</h3>
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="col">
+                <h3>Categories</h3>
+                <a href="#">Almonds</a>
+                <a href="#">Cashews</a>
+                <a href="#">Walnuts</a>
+                <a href="#">Dates</a>
+            </div>
+
+            <div class="col">
+                <h3>Contact</h3>
+                <p>📧 info@crunchybite.com</p>
+                <p>📞 +92 300 1234567</p>
+                <p>📍 Karachi, Pakistan</p>
+            </div>
+
+        </div>
+
+        <div class="bottom">
+            <p>© 2026 Crunchy Bite. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="home.js"></script>
+
+</body>
+
+</html>
