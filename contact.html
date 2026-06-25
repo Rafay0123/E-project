@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>Crunchy Bite - Premium Dry Fruits</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+            <h1>Crunchy Bites</h1>
+        </div>
+        <nav class="nav" id="navMenu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-only"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li class="mobile-only"><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search products...">
+            <button>Search</button>
+        </div>
+        <div class="icons">
+            <div class="cart" onclick="window.location.href='cart.html'">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+            </div>
+            <button class="login" onclick="window.location.href='login.html'">Login</button>
+        </div>
+        <div class="mobile" onclick="toggleMenu(this)">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</header>
+
+
+
+    <section class="contact-hero">
+        <h1>Contact Us</h1>
+        <p>Your journey towards health starts with a simple conversation.</p>
+    </section>
+
+    <main class="contact-main">
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Our Office Address</h3>
+                <p>Suite 404, Business Avenue, Main Shahrah-e-Faisal, Karachi, Pakistan.</p>
+            </div>
+            <div class="info-card">
+                <h3>Customer Support</h3>
+                <p>Call us at: +92 312 3456789</p>
+                <p>Available Mon-Sat (9am to 9pm)</p>
+            </div>
+            <div class="info-card">
+                <h3>Email Inquiries</h3>
+                <p>General: info@crunchybites.com</p>
+                <p>Sales: sales@crunchybites.com</p>
+            </div>
+            <div class="info-card">
+                <h3>Working Hours</h3>
+                <p>Monday - Friday: 09:00 - 21:00</p>
+                <p>Saturday - Sunday: 10:00 - 18:00</p>
+            </div>
+        </div>
+
+        <section class="form-section">
+            <div class="form-intro">
+                <h2>Drop Us A Line</h2>
+                <p>We believe in providing the best experience to our customers. Whether you have a question about our dry fruit sourcing, delivery status, or bulk orders, our support team is always ready to assist you.</p>
+                <p>Please fill out the form accurately so we can direct your inquiry to the right department.</p>
+            </div>
+            <form class="form-group" action="#">
+                <input type="text" placeholder="Full Name (Required)" required>
+                <input type="email" placeholder="Email Address (Required)" required>
+                <input type="tel" placeholder="Phone Number">
+                <input type="text" placeholder="Select Subject">
+                <select style="padding: 15px; border-radius: 8px; border: 1px solid #ddd;">
+                    <option>General Inquiry</option>
+                    <option>Bulk Order Request</option>
+                    <option>Delivery Issues</option>
+                    <option>Product Quality Feedback</option>
+                </select>
+                <textarea rows="8" placeholder="Type your detailed message here..."></textarea>
+                <button type="submit">Submit Your Request</button>
+            </form>
+        </section>
+
+        <section class="why-us-section">
+            <h2 style="text-align: center; margin-bottom: 30px;">Why Trust Crunchy Bites?</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>Fast Delivery</h3>
+                    <p>We prioritize speed. Our logistics network ensures that your order reaches your doorstep within 48-72 hours across major cities.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Premium Quality</h3>
+                    <p>We source only the best harvests. Every batch undergoes rigorous quality testing before it reaches our inventory.</p>
+                </div>
+                <div class="why-card">
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated customer success team is available around the clock to answer your queries and resolve any concerns.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Freshness Guaranteed</h3>
+                    <p>We use state-of-the-art vacuum-sealed packaging to lock in the freshness and nutritional value of every single nut.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-container">
+            <h2 style="margin-bottom: 20px;">Frequently Asked Questions</h2>
+            <div class="faq-item"><h4>What is the estimated delivery time for my order?</h4><p>We strive to deliver all orders within 3-5 business days. During holidays, it might take a day or two extra.</p></div>
+            <div class="faq-item"><h4>Which payment methods do you currently accept?</h4><p>Currently, we support Cash on Delivery (COD) and direct Bank Transfers for pre-paid orders.</p></div>
+            <div class="faq-item"><h4>What if I receive a damaged product?</h4><p>We offer a hassle-free 7-day return policy. Simply email us a photo of the product, and we will arrange a replacement.</p></div>
+            <div class="faq-item"><h4>How do you ensure the product quality?</h4><p>Our quality control team manually inspects every batch for size, texture, and taste standards.</p></div>
+            <div class="faq-item"><h4>Can I place a bulk order for events?</h4><p>Yes! We offer special discounts on bulk orders. Please contact our sales team using the form above.</p></div>
+            <div class="faq-item"><h4>Is my personal data safe?</h4><p>Absolutely. We use industry-standard encryption to protect your personal and payment information.</p></div>
+        </section>
+
+        <div class="map-section">
+            <div style="background: #eee; height: 400px; display: flex; align-items: center; justify-content: center;">
+                <p>Google Map Integration Area</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to Experience Premium Dry Fruits?</h2>
+            <p>Join thousands of satisfied customers and elevate your snacking experience today.</p>
+            <button onclick="window.location.href='product.html'">Browse Our Shop</button>
+        </div>
+
+    </main>
+
+
+</section>
+</body>
+</html>

@@ -1,4 +1,3 @@
-// Load shopping cart items
 let cart = JSON.parse(localStorage.getItem('crunchyCart')) || [];
 
 // Static mandatory pricing items as requested (Non-editable structure values)

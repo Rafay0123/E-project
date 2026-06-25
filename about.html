@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <title>Crunchy Bite - Premium Dry Fruits</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="coocontainer">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+            <h1>Crunchy Bites</h1>
+        </div>
+        <nav class="nav" id="navMenu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-only"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li class="mobile-only"><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search products...">
+            <button>Search</button>
+        </div>
+        <div class="icons">
+            <div class="cart" onclick="window.location.href='cart.html'">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+            </div>
+            <button class="login" onclick="window.location.href='login.html'">Login</button>
+        </div>
+        <div class="mobile" onclick="toggleMenu(this)">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</header>
+
+    <div class="hero-section">
+        <h1>About Crunchy Bites</h1>
+        <p>Redefining Purity in Dry Fruits - Since 2089</p>
+    </div>
+
+    <main class="container">
+        
+        <section class="section">
+            <h2>Our Comprehensive Story</h2>
+            <p>Welcome to Crunchy Bites, a name synonymous with quality, trust, and freshness. Our journey began in the vibrant markets of Pakistan, where we witnessed a significant gap in the quality of dry fruits available to the everyday consumer.</p>
+            <p>Most retailers were prioritizing shelf-life over health, leading to products that were heavily processed and lacked the essential nutrients that dry fruits are known for. We took it upon ourselves to challenge this narrative.</p>
+            <p>From day one, our goal was simple: to bring the farm directly to your table, ensuring that each almond, walnut, and date retains its natural goodness.</p>
+        </section>
+
+        <section class="section">
+            <h2>Our Mission & Vision</h2>
+            <p>Our mission is to establish a health-conscious community in Pakistan. We believe that what you eat defines how you feel. By providing unadulterated, premium quality nuts and seeds, we empower our customers to lead a healthier lifestyle.</p>
+            <p>Looking ahead, our vision is to expand our reach to every province of the country, ensuring that high-quality nutrition is accessible to everyone, regardless of their location.</p>
+        </section>
+
+        <section class="section">
+            <h2>The Manufacturing Excellence</h2>
+            <p>We do not just sell; we curate. Our process involves:</p>
+            <ul>
+                <li><strong>Ethical Sourcing:</strong> Partnering only with growers who follow sustainable farming practices.</li>
+                <li><strong>Manual Sorting:</strong> Every single nut is hand-inspected to remove any imperfect pieces.</li>
+                <li><strong>Hygienic Environment:</strong> Our packing facilities adhere to international food safety standards.</li>
+                <li><strong>Quality Testing:</strong> Random batches are tested for moisture content and purity.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Core Values We Uphold</h2>
+            <div class="values-grid">
+                <div class="card"><h3>Integrity</h3><p>We believe in honesty above all else. What you see is what you get.</p></div>
+                <div class="card"><h3>Customer First</h3><p>Your satisfaction is the metric by which we measure our success.</p></div>
+                <div class="card"><h3>Quality Focus</h3><p>We never compromise on the standards of our produce.</p></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Why Choose Our Dry Fruits?</h2>
+            <p>There are countless options in the market, but here is why Crunchy Bites stands apart:</p>
+            <p>We have invested heavily in logistics to ensure that the time between harvesting and delivery is minimized. This ensures that when you open a packet of Crunchy Bites, you get that distinct "crunch" and fresh aroma that you deserve.</p>
+        </section>
+
+        <section class="section">
+            <h2>Meet Our Dedicated Team</h2>
+            <p>Behind the brand, there is a team of enthusiasts who are passionate about nutrition and wellness.</p>
+            <div class="team-grid">
+                <div class="card"><h3>The Sourcing Team</h3><p>They travel across the northern regions to find the best produce.</p></div>
+                <div class="card"><h3>Quality Control</h3><p>A team of professionals who ensure every pack meets our high standards.</p></div>
+                <div class="card"><h3>Customer Support</h3><p>Always here to answer your queries and resolve your issues instantly.</p></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <div class="card">
+                <h4>Are your products preservative-free?</h4>
+                <p>Yes, we do not use any artificial preservatives or chemicals. Everything is 100% natural.</p>
+            </div>
+            <div class="card" style="margin-top:20px;">
+                <h4>How should I store these dry fruits?</h4>
+                <p>We recommend storing them in a cool, dark place, preferably in an airtight container to maintain freshness.</p>
+            </div>
+        </section>
+
+        <div class="footer-cta">
+            <h2>Join Our Growing Family</h2>
+            <p>Experience the difference of premium quality today. Shop now and feel the crunch!</p>
+        </div>
+
+    </main>
+
+
+<script>
+function toggleMenu(menu){
+    menu.classList.toggle("open");
+    document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
+</body>
+</html>
