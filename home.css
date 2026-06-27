@@ -48,8 +48,29 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    flex-wrap: wrap;
-    gap: 40px;
+    flex-wrap: nowrap; /* Wrap hata diya taake menu na hate */
+}
+
+/* Mobile Icon Show karein */
+@media (max-width: 900px) {
+ .mobile { display: flex; }
+    
+    .nav {
+        display: none; /* Default hidden */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
+        border-top: 1px solid #ddd;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+    
+    .nav.active { display: block; } /* Toggle hone par dikhega */
+    
+    .mobile-only { display: block !important; }
 }
 
 .logo {
@@ -854,7 +875,7 @@ body {
 
 .insta-gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* Desktop: 4 columns */
     gap: 15px;
 }
 
@@ -871,18 +892,30 @@ body {
 .insta-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(61, 37, 20, 0.7);
+    background: rgba(61, 37, 20, 0.6); /* Slightly darker brown */
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     font-size: 30px;
-    opacity: 0;
+    
+    /* CHANGE: Pehle 0 tha, ab 0.3 (visible) kar diya */
+    opacity: 0.3; 
     transition: 0.3s ease-in-out;
 }
 
+/* Hover effect */
 .insta-item:hover .insta-overlay {
-    opacity: 1;
+    opacity: 1; /* Hover par full bright */
+    transform: scale(1.05); /* Halka sa zoom effect */
+}
+
+/* ====== RESPONSIVE (Mobile ke liye) ====== */
+@media (max-width: 768px) {
+    .insta-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Mobile: 2 columns */
+        gap: 10px;
+    }
 }
 
 

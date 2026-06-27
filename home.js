@@ -33,3 +33,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+function toggleMenu(element) {
+    element.classList.toggle('open'); // Mobile icon ki animation
+    document.getElementById('navMenu').classList.toggle('active'); // Menu show/hide
+}
+
+// Cart aur Login button ko click-able banane ke liye (Agar onclick nahi lagaya to ye zaroori hai)
+document.querySelector('.cart').addEventListener('click', () => {
+    window.location.href = 'cart.html';
+});
+
+document.querySelector('.login').addEventListener('click', () => {
+    window.location.href = 'login.html';
+});
