@@ -13,11 +13,11 @@
 <body>
 
   
- <header class="header">
+  <header class="header">
     <div class="container">
         <div class="logo">
             <img src="img/logo.png" alt="Logo">
-            <h1>Crunchy Bites</h1>
+            <h1>Crunchy Bite</h1>
         </div>
         
         <nav class="nav" id="navMenu">
@@ -25,27 +25,27 @@
                 <li><a href="home.html">Home</a></li>
                 <li><a href="product.html">Product</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="service.html">Service</a></li>
+                <li><a href="service.html">Festival Packs</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li class="mobile-only"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li class="mobile-only"><a href="cart.html">Cart</a></li>
                 <li class="mobile-only"><a href="login.html">Login</a></li>
             </ul>
         </nav>
-        
+
         <div class="search">
             <input type="text" placeholder="Search products...">
             <button>Search</button>
         </div>
-        
+
         <div class="icons">
-            <div class="cart" onclick="window.location.href='cart.html'">
+            <a href="cart.html" class="cart">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span>Cart</span>
-            </div>
-            <button class="login" onclick="window.location.href='login.html'">Login</button>
+            </a>
+            <a href="login.html"><button class="login">Login</button></a>
         </div>
-        
-        <div class="mobile" onclick="toggleMenu(this)">
+
+        <div class="mobile" id="mobileBtn" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>

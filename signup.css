@@ -8,15 +8,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50vh; /* Screen ke center se thoda upar */
-    transform: translateY(-50%); /* Centering ke liye */
+    margin-top: 50vh; 
+    transform: translateY(-50%); 
 }
-/* Pure screen ke center mein laane ke liye */
 .auth-container {
     display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center;     /* Vertically center */
-    min-height: 100vh;       /* Puri screen ki height */
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;       
     background-color: #f4f4f4;
 }
 
@@ -38,7 +37,6 @@ body {
     border: 1px solid #ddd; border-radius: 8px; outline: none;
 }
 
-/* Button ki professional styling */
 .auth-box button, .signup-box button { 
     width: 100%; padding: 12px; background: #ff6b35; 
     color: white; border: none; border-radius: 8px; 
@@ -48,7 +46,7 @@ body {
 
 .auth-box button:hover, .signup-box button:hover { 
     background: #e65a2a; 
-    transform: scale(1.02); /* Button halka sa bada hoga */
+    transform: scale(1.02);
 }
 
 .auth-box p, .signup-box p { 

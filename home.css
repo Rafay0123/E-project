@@ -1,4 +1,3 @@
-/* ====== RESET & BASE STYLES ====== */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +10,6 @@ body {
     color: #333;
 }
 
-/* ====== TOP MARQUEE ====== */
 .top-marquee {
     width: 100%;
     background: #3d2514; 
@@ -33,7 +31,6 @@ body {
     color: #d4a017;
 }
 
-/* ====== HEADER & NAVIGATION ====== */
 .header {
     width: 100%;
     position: sticky;
@@ -48,15 +45,14 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    flex-wrap: nowrap; /* Wrap hata diya taake menu na hate */
+    flex-wrap: nowrap; 
 }
 
-/* Mobile Icon Show karein */
 @media (max-width: 900px) {
  .mobile { display: flex; }
     
     .nav {
-        display: none; /* Default hidden */
+        display: none; 
         position: absolute;
         top: 70px;
         left: 0;
@@ -68,7 +64,7 @@ body {
         z-index: 1000;
     }
     
-    .nav.active { display: block; } /* Toggle hone par dikhega */
+    .nav.active { display: block; } 
     
     .mobile-only { display: block !important; }
 }
@@ -123,7 +119,6 @@ body {
     width: 100%;
 }
 
-/* ====== SEARCH & ACTION ICONS ====== */
 .search {
     display: flex;
     align-items: center;
@@ -185,7 +180,6 @@ body {
     transform: scale(1.05);
 }
 
-/* ====== MOBILE NAVIGATION ELEMENTS ====== */
 .mobile {
     display: none;
     flex-direction: column;
@@ -216,7 +210,6 @@ body {
     display: none;
 }
 
-/* ====== SWIPER BANNER MASTER STYLES (STRICT FULL WIDTH) ====== */
 .mySwiper {
     width: 100%;
     height: 600px;
@@ -225,15 +218,13 @@ body {
 }
 
 .banner-slide {
-    width: 100% !important; /* Forces layout width to take full screen */
+    width: 100% !important; 
     height: 100% !important;
     background-repeat: no-repeat !important;
-    background-size: cover !important; /* Pehle image scale barhayegi */
-    background-position: center center !important; /* Horizontal aur vertical centering zero out */
+    background-size: cover !important; 
+    background-position: center center !important; 
     position: relative;
 }
-
-/* ====== INDIVIDUAL CLASS BACKGROUNDS TO PREVENT INLINE SQUEEZING ====== */
 .slide-one {
     background-image: linear-gradient(to right, rgba(30, 20, 15, 0.85) 35%, rgba(0, 0, 0, 0.1)), url('img/banner1.jpeg') !important;
 }
@@ -246,19 +237,17 @@ body {
     background-image: linear-gradient(to right, rgba(20, 20, 20, 0.85) 35%, rgba(0, 0, 0, 0.1)), url('img/banner3.jpeg') !important;
 }
 
-/* Text Position Container Lock */
 .slide-content.alignment-left {
     position: absolute;
     left: 8%;         
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
-    max-width: 460px !important; /* Content boundary tight taake text left blank area me rahe */
+    max-width: 460px !important; 
     z-index: 10;
     display: block !important;
 }
 
-/* Typography & Visual Details */
 .sub-title {
     font-size: 13px;
     letter-spacing: 2px;
@@ -310,12 +299,10 @@ body {
     transform: translateY(-2px);
 }
 
-/* Light Theme Variant */
 .light-bg-slide .slide-content h2 { color: #3d2514; }
 .light-bg-slide .dark-accent { color: #bc7631 !important; }
 .light-bg-slide .slide-content p { color: #5c4d42; }
 
-/* Responsive Media Query */
 @media (max-width: 768px) {
     .mySwiper { height: 450px; }
     .banner-slide { background-position: center center !important; }
@@ -335,7 +322,6 @@ body {
     .banner-btn { align-self: center; }
     .light-bg-slide .slide-content h2, .light-bg-slide .slide-content p { color: #fff; }
 }
-/* ====== TWO-COLUMN PROMO VIDEO SECTION ====== */
 .vid {
     justify-content: space-evenly;
     display: flex;
@@ -429,7 +415,6 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.644);
 }
 
-/* ====== STANDALONE YOUTUBE SECTION ====== */
 .video-section {
     padding: 60px 20px;
     background: #fff; 
@@ -472,7 +457,6 @@ body {
     border: none;
 } 
 
-/* ====== ANIMATED INFO SECTION ====== */
 .info-section {
     width: 100%;
     height: 400px;
@@ -527,7 +511,6 @@ body {
     to { opacity: 1; transform: translateX(0); }
 }
 
-/* ====== CATEGORIES LAYOUT ====== */
 .mar {
     text-align: center;      
     font-size: 65px;        
@@ -627,7 +610,6 @@ body {
     transform: translateY(0);
 }
 
-/* ====== PRODUCTS GRID LAYOUT ====== */
 .bcard {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -667,17 +649,17 @@ body {
     transition: background-image 0.4s ease-in-out;
 }
 
-.product-image.almonds { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxusbPUp74hZclyTzO_kRnr6ttHxLjNkDILvYNk-oRPw&s=10'); }
-.product-image.mix-nuts { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxusbPUp74hZclyTzO_kRnr6ttHxLjNkDILvYNk-oRPw&s=10'); }
-.product-image.dates { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxusbPUp74hZclyTzO_kRnr6ttHxLjNkDILvYNk-oRPw&s=10'); }
-.product-image.cashews { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxusbPUp74hZclyTzO_kRnr6ttHxLjNkDILvYNk-oRPw&s=10'); }
-.product-image.pistachios { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxusbPUp74hZclyTzO_kRnr6ttHxLjNkDILvYNk-oRPw&s=10'); }
+.product-image.almonds { background-image: url('img/1st.jfif'); }
+.product-image.mix-nuts { background-image: url('img/2.jfif'); }
+.product-image.dates { background-image: url('img/3.webp'); }
+.product-image.cashews { background-image: url('img/4.jfif'); }
+.product-image.pistachios { background-image: url('img/5th.jfif'); }
 
-.card:hover .product-image.almonds { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR51tA16cqdDIEoNXpntV9lsHq6NrodyBpaqJ3mezLTcA&s=10') !important; }
-.card:hover .product-image.mix-nuts { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR51tA16cqdDIEoNXpntV9lsHq6NrodyBpaqJ3mezLTcA&s=10') !important; }
-.card:hover .product-image.dates { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR51tA16cqdDIEoNXpntV9lsHq6NrodyBpaqJ3mezLTcA&s=10') !important; }
-.card:hover .product-image.cashews { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR51tA16cqdDIEoNXpntV9lsHq6NrodyBpaqJ3mezLTcA&s=10') !important; }
-.card:hover .product-image.pistachios { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR51tA16cqdDIEoNXpntV9lsHq6NrodyBpaqJ3mezLTcA&s=10') !important; }
+.card:hover .product-image.almonds { background-image: url('img/8.jfif') !important; }
+.card:hover .product-image.mix-nuts { background-image: url('img/2.0.png') !important; }
+.card:hover .product-image.dates { background-image: url('img/3.0.png') !important; }
+.card:hover .product-image.cashews { background-image: url('img/4.0.png') !important; }
+.card:hover .product-image.pistachios { background-image: url('img/12.jfif') !important; }
 
 .product-info {
     padding: 15px;
@@ -724,7 +706,6 @@ body {
     text-decoration: line-through;
 }
 
-/* ====== PROMO COUNTDOWN BANNER ====== */
 .promo-countdown-section {
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('img/Gemini_Generated_Image_foxbyifoxbyifoxb.png');
@@ -786,7 +767,6 @@ body {
     color: #aaa;
 }
 
-/* ====== WHY CHOOSE US ====== */
 .why-choose-section {
     padding: 120px 8%; 
     background-color: #fdfcf9; 
@@ -867,7 +847,6 @@ body {
     font-weight: 400;
 }
 
-/* ====== INSTAGRAM GALLERY ====== */
 .insta-grid-section {
     padding: 60px 5%;
     background: #fff;
@@ -875,7 +854,7 @@ body {
 
 .insta-gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Desktop: 4 columns */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 15px;
 }
 
@@ -892,28 +871,24 @@ body {
 .insta-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(61, 37, 20, 0.6); /* Slightly darker brown */
+    background: rgba(61, 37, 20, 0.6); 
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     font-size: 30px;
     
-    /* CHANGE: Pehle 0 tha, ab 0.3 (visible) kar diya */
     opacity: 0.3; 
     transition: 0.3s ease-in-out;
 }
 
-/* Hover effect */
 .insta-item:hover .insta-overlay {
-    opacity: 1; /* Hover par full bright */
-    transform: scale(1.05); /* Halka sa zoom effect */
+    transform: scale(1.05); 
 }
 
-/* ====== RESPONSIVE (Mobile ke liye) ====== */
 @media (max-width: 768px) {
     .insta-gallery {
-        grid-template-columns: repeat(2, 1fr); /* Mobile: 2 columns */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 10px;
     }
 }
@@ -951,7 +926,7 @@ body {
 
 
 
-/* ====== FOOTER ====== */
+
 .footer {
     background: #111;
     color: #ddd;
@@ -1003,7 +978,6 @@ body {
     font-size: 14px;
 }
 
-/* ====== MASTER MEDIA QUERIES ====== */
 @media (max-width: 1200px) {
     .bcard { grid-template-columns: repeat(3, 1fr); }
 }
@@ -1097,13 +1071,10 @@ body {
 
 
 
-/* ====== MOBILE RESPONSIVE FIXES (Add this to the bottom of your CSS) ====== */
 
 @media (max-width: 992px) {
-    /* Header Container Fix */
     .container { gap: 20px; padding: 10px 15px; }
 
-    /* Categories Grid Fix - Ab ye screen par 2-2 karke ayengi */
     .bcat, .bcat1 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1118,18 +1089,16 @@ body {
         height: 140px;
     }
 
-    /* Video Section Fix */
     .vid { 
         margin: 50px 0; 
         padding: 0 15px;
     }
     .bro, .bro1 {
         width: 100%;
-        height: auto; /* Fixed height hatayi */
+        height: auto; 
         min-height: 300px;
     }
 
-    /* Info Section Fix */
     .info-section {
         height: auto;
         padding: 40px 20px;
@@ -1139,7 +1108,6 @@ body {
 }
 
 @media (max-width: 600px) {
-    /* Categories Mobile Fix - Ab 1-1 karke ayengi */
     .bcat, .bcat1 {
         grid-template-columns: 1fr;
     }
@@ -1148,13 +1116,11 @@ body {
         height: 200px;
     }
 
-    /* Titles Mobile Fix */
     .mar, .mar1 {
         font-size: 35px !important;
         margin: 40px 0 !important;
     }
 
-    /* Products Grid Fix */
     .bcard {
         grid-template-columns: 1fr;
         padding: 20px;
@@ -1162,7 +1128,6 @@ body {
     .card { max-width: 320px; }
 }
 
-/* Footer Fix */
 @media (max-width: 768px) {
     .footer .container {
         flex-direction: column;

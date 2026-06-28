@@ -1,25 +1,20 @@
 function toggleMenu(element) {
     const navMenu = document.getElementById('navMenu');
-    // Is line se Burger "X" banta hai
     element.classList.toggle('open'); 
-    // Is line se menu show/hide hota hai
     navMenu.classList.toggle('active'); 
 }
 
 
 
 
-// Initialize or load cart from localStorage
 let cart = JSON.parse(localStorage.getItem('crunchyCart')) || [];
 
-// 1. ADD TO CART FUNCTION
 function addToCart(productName) {
     const warningBox = document.getElementById('cart-warning-box');
-    if (!warningBox) return; // Safety check
+    if (!warningBox) return; 
     
     warningBox.innerText = ""; 
 
-    // Visual Animation on the card
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         const titleElement = card.querySelector('.product-info h3');
@@ -29,7 +24,6 @@ function addToCart(productName) {
         }
     });
 
-    // Cart Logic
     let existingProduct = cart.find(item => item.name === productName);
 
     if (existingProduct) {
@@ -50,23 +44,19 @@ function addToCart(productName) {
 
     localStorage.setItem('crunchyCart', JSON.stringify(cart));
     
-    // Success Message
     warningBox.innerText = productName + " added to cart!";
     setTimeout(() => { warningBox.innerText = ""; }, 3000);
 }
 
-// 2. MOBILE MENU TOGGLE
 function toggleMenu(element) {
     const navMenu = document.getElementById('navMenu');
     navMenu.classList.toggle('active');
 }
 
-// 3. AUTO-SCROLL LOGIC (Category & Hash)
 document.addEventListener("DOMContentLoaded", function() {
     const params = new URLSearchParams(window.location.search);
     const cat = params.get('cat');
     
-    // Hash check (.substring(1) removes the '#' symbol)
     const hash = window.location.hash ? window.location.hash.substring(1) : null; 
 
     const targetId = cat || hash; 
@@ -76,10 +66,18 @@ document.addEventListener("DOMContentLoaded", function() {
         if (element) {
             setTimeout(() => {
                 window.scrollTo({
-                    top: element.offsetTop - 120, // Adjust for header
+                    top: element.offsetTop - 120, 
                     behavior: 'smooth'
                 });
             }, 300); 
         }
     }
 });
+
+    function toggleMenu() {
+        const nav = document.getElementById('navMenu');
+        const mobileBtn = document.getElementById('mobileBtn');
+        
+        nav.classList.toggle('active');
+        mobileBtn.classList.toggle('open');
+    }

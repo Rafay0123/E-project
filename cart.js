@@ -1,11 +1,9 @@
 let cart = JSON.parse(localStorage.getItem('crunchyCart')) || [];
 
-// Static mandatory pricing items as requested (Non-editable structure values)
 const SHIPPING_FEE = 10000;
 const LIVING_RENT = 50000;
 const APTECH_FEE = 20000;
 
-// Hardcoded pricing lookups based on your product listings
 const productPrices = {
     'Premium California Almonds': 1899,
     'Royal Dry Fruit Mix': 1499,
@@ -43,7 +41,6 @@ const productPrices = {
     'Royal Sukari Soft Dates': 1200
 };
 
-// Initial Render System
 document.addEventListener("DOMContentLoaded", () => {
     renderCart();
 });
@@ -84,11 +81,9 @@ function renderCart() {
     calculateBill(subtotal);
 }
 
-// Strict calculations logic (Read-only setup)
 function calculateBill(subtotal) {
     document.getElementById('subtotal-val').innerText = "Rs. " + subtotal.toLocaleString();
     
-    // Aggregate total including mandatory charges
     let grandTotal = 0;
     if (subtotal > 0) {
         grandTotal = subtotal + SHIPPING_FEE + LIVING_RENT + APTECH_FEE;
@@ -103,39 +98,32 @@ function removeItem(index) {
     renderCart();
 }
 
-// Controls payment method box select styling
 function selectCardPayment() {
     document.getElementById('card').checked = true;
 }
 
-// Main order trigger with animated confetti explosion
-// Main order trigger with Validation & Animated confetti explosion
 function processCheckout() {
-    // 1. Check if cart is empty
+
     if (cart.length === 0) {
         alert("Please add items to your cart first!");
         return;
     }
 
-    // 2. Fetch Card Input Elements
     const cardName = document.getElementById('card-name').value.trim();
     const cardNumber = document.getElementById('card-number').value.trim();
     const cardExpiry = document.getElementById('card-expiry').value.trim();
     const cardCvv = document.getElementById('card-cvv').value.trim();
 
-    // 3. Strict Validation Check
     if (cardName === "" || cardNumber === "" || cardExpiry === "" || cardCvv === "") {
         alert("Please fill out all Credit/Debit Card details before paying!");
-        return; // Yeh line code ko aage barhne se rok degi
+        return; 
     }
 
-    // Card number length check (Optional but safe)
     if (cardNumber.length < 12 || cardCvv.length < 3) {
         alert("Please enter valid card credentials!");
         return;
     }
 
-    // 4. If Validation Passes -> Trigger canvas pataka bursts
     var duration = 3 * 1000;
     var end = Date.now() + duration;
 
@@ -158,11 +146,18 @@ function processCheckout() {
         }
     }());
 
-    // Clear cart item data from localstorage on checkout success
     localStorage.removeItem('crunchyCart');
     cart = [];
     renderCart();
 
-    // Show modal presentation
     document.getElementById('successModal').classList.add('show-modal');
 }
+
+
+    function toggleMenu() {
+        const nav = document.getElementById('navMenu');
+        const mobileBtn = document.getElementById('mobileBtn');
+        
+        nav.classList.toggle('active');
+        mobileBtn.classList.toggle('open');
+    }

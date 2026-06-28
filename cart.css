@@ -1,3 +1,37 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #fff; 
+    color: #333;
+}
+
+.top-marquee {
+    width: 100%;
+    background: #3d2514; 
+    color: #fff;
+    padding: 8px 0;
+    font-size: 14px;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #bc7631; 
+}
+
+.top-marquee marquee {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.top-marquee b {
+    color: #d4a017;
+}
+
 .header {
     width: 100%;
     position: sticky;
@@ -9,9 +43,31 @@
 
 .container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 15px 20px;
+    flex-wrap: nowrap; 
+}
+
+@media (max-width: 900px) {
+ .mobile { display: flex; }
+    
+    .nav {
+        display: none; 
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
+        border-top: 1px solid #ddd;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+    
+    .nav.active { display: block; } 
+
+    .mobile-only { display: block !important; }
 }
 
 .logo {
@@ -31,7 +87,6 @@
     color: #000;
 }
 
-/* ====== NAVIGATION (ORIGINAL ORANGE HOVER) ====== */
 .nav ul {
     display: flex;
     list-style: none;
@@ -47,7 +102,7 @@
 }
 
 .nav a:hover {
-    color: #ff6b35; /* Pehle wala orange color */
+    color: #ff6b35;
 }
 
 .nav a::after {
@@ -57,7 +112,7 @@
     bottom: -5px;
     width: 0;
     height: 2px;
-    background: #ff6b35; /* Pehle wala orange color */
+    background: #ff6b35;
     transition: 0.3s;
 }
 
@@ -65,7 +120,6 @@
     width: 100%;
 }
 
-/* ====== SEARCH BUTTON (ORIGINAL ORANGE) ====== */
 .search {
     display: flex;
     align-items: center;
@@ -85,16 +139,11 @@
 
 .search button {
     border: none;
-    background: #ff6b35; /* Pehle wala orange color */
+    background: #ff6b35;
     color: white;
     padding: 8px 15px;
     border-radius: 20px;
     cursor: pointer;
-    transition: 0.2s;
-}
-
-.search button:hover {
-    background: #e55a2b; /* Slightly darker orange for interactive feel */
 }
 
 .icons {
@@ -103,7 +152,6 @@
     gap: 15px;
 }
 
-/* ====== CART ICON (ORIGINAL HOVER RESTORED) ====== */
 .cart {
     display: flex;
     align-items: center;
@@ -114,11 +162,10 @@
 }
 
 .cart:hover {
-    color: #ff6b35; /* Pehle wala orange color */
+    color: #ff6b35;
     transform: scale(1.05);
 }
 
-/* ====== LOGIN BUTTON (UNTOUCHED / ORIGINAL BLACK) ====== */
 .login {
     background: black;
     color: white;
@@ -130,7 +177,7 @@
 }
 
 .login:hover {
-    background: #ff6b35; /* Pehle wala orange color */
+    background: #ff6b35;
     transform: scale(1.05);
 }
 
@@ -164,27 +211,8 @@
     display: none;
 }
 
-@media (max-width: 900px) {
-    .nav {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: white;
-        display: none;
-        flex-direction: column;
-        text-align: center;
-        padding: 20px 0;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        z-index: 999;
-    }
-    .nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
 
-/* CART CONTAINER WRAPPER LAYOUT */
+
 .cart-wrapper {
     display: flex;
     max-width: 1200px;
@@ -214,7 +242,6 @@
     padding-bottom: 10px;
 }
 
-/* CART ITEM CARDS */
 .cart-item {
     display: flex;
     justify-content: space-between;
@@ -252,7 +279,6 @@
 }
 .remove-btn:hover { transform: scale(1.15); }
 
-/* PAYMENT SYSTEM STYLING */
 .payment-section {
     margin-top: 40px;
 }
@@ -275,12 +301,11 @@
     font-weight: 500;
 }
 
-/* CSS to freeze Cash on Delivery interactiveness */
 .method-box.disabled {
     background: #f5f5f5;
     opacity: 0.6;
     cursor: not-allowed;
-    pointer-events: none; /* disables completely */
+    pointer-events: none; 
     border-color: #eee;
 }
 
@@ -309,7 +334,6 @@
 .row-inputs { display: flex; gap: 15px; }
 .row-inputs .input-group { flex: 1; }
 
-/* BILLING MATRIX DETAILS */
 .summary-row {
     display: flex;
     justify-content: space-between;
@@ -339,7 +363,6 @@
 }
 .btn-checkout:hover { background: #e55a2b; }
 
-/* MODAL / POPUP INTERFACE SYSTEM */
 .modal-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -367,7 +390,6 @@
 .success-icon-wrap { font-size: 60px; color: #2ebd59; margin-bottom: 15px; }
 .green-text { color: #2ebd59; font-size: 22px; margin-bottom: 10px; font-weight: bold; }
 
-/* Tick Zoom Bump effect on launch */
 .tick-anim {
     animation: zoomBump 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
@@ -376,7 +398,6 @@
     100% { transform: scale(1); }
 }
 
-/* HIGH-END MANDATORY PS5 ADDON CARD (No exit pathways configured) */
 .ps5-card {
     border: 2px solid #d4a017;
     background: linear-gradient(145deg, #ffffff, #fcf8ee);

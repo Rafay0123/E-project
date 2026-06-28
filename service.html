@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="service.css">
+    <title>Crunchy Bite - Premium Dry Fruits</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+            <h1>Crunchy Bite</h1>
+        </div>
+        
+        <!-- Nav Menu -->
+        <nav class="nav" id="navMenu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Festival Packs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- Mobile only items -->
+                <li class="mobile-only"><a href="cart.html">Cart</a></li>
+                <li class="mobile-only"><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+
+        <div class="search">
+            <input type="text" placeholder="Search products...">
+            <button>Search</button>
+        </div>
+
+        <div class="icons">
+            <a href="cart.html" class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+            </a>
+            <a href="login.html"><button class="login">Login</button></a>
+        </div>
+
+        <div class="mobile" id="mobileBtn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+    
+<section class="offers-page">
+    <h1 class="main-heading">Exclusive Dry Fruit Offers & Festival Packs</h1>
+
+   
+    <div id="error-msg" style="color: red; text-align: center; font-weight: bold; margin: 10px 0; display: none;">
+        Only one Festival Pack in one cart, no other items allowed!
+    </div>
+
+    <div class="product-grid">
+        
+        <div class="product-card" id="c1"><div class="img-side"><img src="img/offer1.png"></div><div class="details-side"><h3>Premium Almonds</h3><p class="nutri-info">Nutrition: Vitamin E, Fiber.</p><div class="price-action"><span>Rs. 1200</span><input type="number" class="qty" value="1"></div><button class="add-btn" onclick="addToCart('c1', 'Premium Almonds', 1200)">Add to Cart</button></div></div>
+        <div class="product-card" id="c2"><div class="img-side"><img src="img/offer2.png"></div><div class="details-side"><h3>Roasted Cashews</h3><p class="nutri-info">Nutrition: Iron, Healthy Fats.</p><div class="price-action"><span>Rs. 1500</span><input type="number" class="qty" value="1"></div><button class="add-btn" onclick="addToCart('c2', 'Roasted Cashews', 1500)">Add to Cart</button></div></div>
+        <div class="product-card" id="c3"><div class="img-side"><img src="img/offer3.png"></div><div class="details-side"><h3>Premium Dates</h3><p class="nutri-info">Nutrition: Fiber, Potassium.</p><div class="price-action"><span>Rs. 900</span><input type="number" class="qty" value="1"></div><button class="add-btn" onclick="addToCart('c3', 'Premium Dates', 900)">Add to Cart</button></div></div>
+        <div class="product-card" id="c4"><div class="img-side"><img src="img/offer4.png"></div><div class="details-side"><h3>Kashmiri Walnuts</h3><p class="nutri-info">Nutrition: Omega-3, Protein.</p><div class="price-action"><span>Rs. 1800</span><input type="number" class="qty" value="1"></div><button class="add-btn" onclick="addToCart('c4', 'Kashmiri Walnuts', 1800)">Add to Cart</button></div></div>
+        <div class="product-card" id="c5"><div class="img-side"><img src="img/offer5.png"></div><div class="details-side"><h3>Salted Pistachios</h3><p class="nutri-info">Nutrition: Vitamin B6, Copper.</p><div class="price-action"><span>Rs. 2200</span><input type="number" class="qty" value="1"></div><button class="add-btn" onclick="addToCart('c5', 'Salted Pistachios', 2200)">Add to Cart</button></div></div>
+        <div class="product-card" id="c6"><div class="img-side"><img src="img/offer6.png"></div><div class="details-side"><h3>Black Raisins</h3><p class="nutri-info">Nutrition: Iron, Calcium.</p><div class="price-action"><span>Rs. 600</span><input type="number" class="qty" value="1"></div><button class="add-btn" onclick="addToCart('c6', 'Black Raisins', 600)">Add to Cart</button></div></div>
+        <div class="product-card" id="c7"><div class="img-side"><img src="img/offer7.png"></div><div class="details-side"><h3>Dried Apricots</h3><p class="nutri-info">Nutrition: Vitamin A, C.</p><div class="price-action"><span>Rs. 1100</span><input type="number" class="qty" value="1"></div><button class="add-btn" onclick="addToCart('c7', 'Dried Apricots', 1100)">Add to Cart</button></div></div>
+        <div class="product-card" id="c8"><div class="img-side"><img src="img/offer8.png"></div><div class="details-side"><h3>Dried Figs</h3><p class="nutri-info">Nutrition: Calcium, Fiber.</p><div class="price-action"><span>Rs. 1600</span><input type="number" class="qty" value="1"></div><button class="add-btn" onclick="addToCart('c8', 'Dried Figs', 1600)">Add to Cart</button></div></div>
+        <div class="product-card" id="c9"><div class="img-side"><img src="img/offer9.png"></div><div class="details-side"><h3>Mixed Fruits</h3><p class="nutri-info">Nutrition: All Essential.</p><div class="price-action"><span>Rs. 2000</span><input type="number" class="qty" value="1"></div><button class="add-btn" onclick="addToCart('c9', 'Mixed Dry Fruits', 2000)">Add to Cart</button></div></div>
+    </div>
+
+    <section class="festival-section">
+        <div class="fest-text">
+            <h2>Grand Festival Dry Fruit Pack</h2>
+            <p>Get a premium mix of all our best-selling dry fruits in one royal box!</p>
+        </div>
+        <button class="fest-btn" onclick="addToCart('festival-pack', 'Grand Festival Pack', 5000)">
+            Order Festival Pack
+        </button>
+    </section>
+</section>
+
+
+
+   <footer class="footer">
+        <div class="container">
+
+            <div class="col">
+                <h2>Crunchy Bite</h2>
+                <p>Premium quality dry fruits delivered fresh and healthy to your doorstep.</p>
+            </div>
+
+            <div class="col">
+                <h3>Links</h3>
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="col">
+                <h3>Categories</h3>
+                <a href="#">Almonds</a>
+                <a href="#">Cashews</a>
+                <a href="#">Walnuts</a>
+                <a href="#">Dates</a>
+            </div>
+
+            <div class="col">
+                <h3>Contact</h3>
+                <p>📧 info@crunchybite.com</p>
+                <p>📞 +92 300 1234567</p>
+                <p>📍 Karachi, Pakistan</p>
+            </div>
+
+        </div>
+
+        <div class="bottom">
+            <p>© 2026 Crunchy Bite. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+<script>
+    function addToCart(id, name, price) {
+        let cart = JSON.parse(localStorage.getItem('myCart')) || [];
+        let errorMsg = document.getElementById('error-msg');
+        errorMsg.style.display = 'none'; 
+
+        const hasFestivalPack = cart.some(item => item.id === 'festival-pack');
+
+        if (id === 'festival-pack') {
+            if (hasFestivalPack) {
+                alert("Already Added: Festival Pack pehle se cart mein hai!");
+            } else if (cart.length > 0) {
+                errorMsg.style.display = 'block';
+                alert("Error: Cart mein pehle se items hain!");
+            } else {
+                cart.push({ id, name, price });
+                localStorage.setItem('myCart', JSON.stringify(cart));
+                alert("Festival Pack added successfully!");
+            }
+            return;
+        }
+        if (hasFestivalPack) {
+            errorMsg.style.display = 'block'; 
+            alert("Error: Cart mein Festival Pack hai, dusre items allowed nahi!");
+            return;
+        }
+
+        if (cart.find(item => item.id === id)) {
+            alert("Already Added: " + name + " is already in your cart!");
+        } else {
+            cart.push({ id, name, price });
+            localStorage.setItem('myCart', JSON.stringify(cart));
+            alert(name + " added successfully!");
+        }
+    }
+    
+    function toggleMenu() {
+        const nav = document.getElementById('navMenu');
+        const mobileBtn = document.getElementById('mobileBtn');
+        
+        nav.classList.toggle('active');
+        mobileBtn.classList.toggle('open');
+    }   
+</script>
+</body>
+</html>

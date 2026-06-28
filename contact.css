@@ -202,16 +202,16 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --primary: #ff6b35;      /* Signature Orange */
+    --primary: #ff6b35;      
     --primary-dark: #e85a28;
-    --dark-bg: #1a1a1a;      /* Deep Black/Gray */
-    --light-bg: #fdfdfd;     /* Clean White */
+    --dark-bg: #1a1a1a;     
+    --light-bg: #fdfdfd;     
     --text-main: #333333;
     --text-muted: #666666;
     --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Page Entrance Animation */
+
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
@@ -222,8 +222,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Hero Section Styling */
-/* Hero Section Styling - Updated with Dry Fruits Image */
 .contact-hero {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                 url('img/contact.png        ');
@@ -250,16 +248,14 @@ body {
     animation: fadeInUp 1s ease-out;
 }
 
-/* Main Container Padding */
 .contact-main {
     max-width: 1200px;
-    margin: -50px auto 50px; /* Overlap with hero for modern look */
+    margin: -50px auto 50px; 
     padding: 0 20px;
     position: relative;
     z-index: 5;
 }
 
-/* Info Grid Cards */
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -295,7 +291,6 @@ body {
     font-size: 15px;
 }
 
-/* Form Section */
 .form-section {
     background: white;
     padding: 60px;
@@ -373,7 +368,6 @@ body {
     transform: scale(1.02);
 }
 
-/* Why Trust Section */
 .why-us-section {
     padding: 40px 0;
 }
@@ -408,7 +402,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* FAQ Accordion Look */
 .faq-container {
     background: #fff;
     padding: 60px;
@@ -436,7 +429,6 @@ body {
     font-weight: 700;
 }
 
-/* Map Section */
 .map-section {
     border-radius: 20px;
     overflow: hidden;
@@ -445,7 +437,6 @@ body {
     border: 5px solid white;
 }
 
-/* Call To Action */
 .cta-section {
     background: var(--dark-bg);
     padding: 80px 40px;
@@ -483,7 +474,6 @@ body {
     transform: translateY(-5px);
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 900px) {
     .form-section {
         grid-template-columns: 1fr;
